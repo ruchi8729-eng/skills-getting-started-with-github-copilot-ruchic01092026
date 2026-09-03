@@ -106,7 +106,6 @@ def signup_for_activity(activity_name: str, email: str):
     activity["participants"].append(email)
     return {"message": f"Signed up {email} for {activity_name}"}
 
-
 @app.delete("/activities/{activity_name}/participants/{email}")
 def unregister_participant(activity_name: str, email: str):
     """Remove a student from an activity."""
